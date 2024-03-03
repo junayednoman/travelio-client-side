@@ -1,16 +1,15 @@
 
 import Btn from '@/components/Btn';
-import { Meie_Script } from 'next/font/google';
+import MobileMenu from '@/components/MobileMenu';
 import Link from 'next/link';
-import React from 'react';
 
 const Navbar = () => {
+
     return (
         <div className='border-b bg-[#F8F9FA]'>
-            <div className='py-3 text-primaryColor flex justify-between items-center xl:px-[130px] border-b'>
-                {/* <p className='font-medium'>Lorem ipsum dolor sit amet consectetur elit!</p> */}
+            <div className='py-2 text-primaryColor flex justify-between items-center xl:px-[130px] lg:px-16 md:px-10 px-3 border-b'>
                 <div className='flex items-center gap-5'>
-                <p className='flex items-center gap-2'><i className="pi pi-phone"></i><span>+880 13453453</span></p>
+                    <p className='flex items-center gap-2'><i className="pi pi-phone"></i><span>+880 13453453</span></p>
                 </div>
                 <div className='flex items-center gap-14'>
                     <div className='flex items-center gap-4 mt-2'>
@@ -21,21 +20,26 @@ const Navbar = () => {
                     </div>
                 </div>
             </div >
-    <div className='flex justify-between items-center xl:mx-[120px] py-5'>
-        <div>
-            <Link href="/">
-                <h1 className='md:text-5xl text-3xl text-primaryColor'>Travelio</h1>
-            </Link>
-        </div>
-        <div className='flex items-center gap-10'>
-            {
-                menuItems.map(item => <Link className='font-medium' key={item.label} href={item.url}>{item.label}</Link>)
-            }
-        </div>
-        <div>
-            <Btn text={"Book your stay"} link={"/"}></Btn>
-        </div>
-    </div>
+            <div className='flex justify-between items-center xl:mx-[120px] lg:mx-16 md:mx-10 mx-3 py-5'>
+                <div>
+                    <Link href="/">
+                        <h1 className='lg:text-5xl md:text-4xl text-3xl text-primaryColor'>Travelio</h1>
+                    </Link>
+                </div>
+                <div className='items-center gap-10 lg:flex hidden'>
+                    {
+                        menuItems.map(item => <Link className='font-medium' key={item.label} href={item.url}>{item.label}</Link>)
+                    }
+                </div>
+                <div className='lg:block hidden'>
+                    <Btn text={"Book your stay"} link={"/"}></Btn>
+                </div>
+                <div className='lg:hidden block'>
+                    <MobileMenu menuItems={menuItems}></MobileMenu>
+                </div>
+            </div>
+
+
         </div >
     );
 };

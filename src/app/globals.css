@@ -31,3 +31,14 @@ body ::selection {
   background: #55372F;
   color: #fff;
 }
+
+.p-sidebar {
+  background: #55372f;
+  color: #fff;
+}
+
+.p-sidebar-close svg{
+  width: 30px;
+  height: 30px;
+  color: #fff;
+}
