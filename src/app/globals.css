@@ -37,8 +37,13 @@ body ::selection {
   color: #fff;
 }
 
-.p-sidebar-close svg{
+.p-sidebar-close svg {
   width: 30px;
   height: 30px;
   color: #fff;
+}
+
+.p-button-icon-only {
+  background-color: #55372F;
+  border-color: #55372F;
 }

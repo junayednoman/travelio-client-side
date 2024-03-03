@@ -13,8 +13,8 @@ const heebo = Heebo({
 })
 
 export const metadata = {
-  title: "Travelio - Book your stay",
-  description: "Travelio - Book your stay",
+  title: "Stavelio - Book your stay",
+  description: "Stavelio - Book your stay",
 };
 
 export default function RootLayout({ children }) {
