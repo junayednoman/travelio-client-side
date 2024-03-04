@@ -52,6 +52,7 @@ body ::selection {
   transform: translatey(-40px);
   opacity: 1;
 }
+
 .promoCard:hover .promoText {
   transform: translateY(-75px);
 }
@@ -59,4 +60,8 @@ body ::selection {
 .promoBtn {
   transform: translatey(30px);
   opacity: 0;
+}
+
+.iconBtn:hover .myIcon {
+  transform: translateX(5px);
 }

@@ -108,15 +108,12 @@ const FeaturedRooms = () => {
     ]
 
     return (
-        <>
+        <div className='md:mb-20 mb-14'>
             <Container>
                 <SectionTitle heading="Our Featured Rooms" subheading={"Indulge in Comfort and Elegance with Our Featured Room Selections"}></SectionTitle>
-                {/* <div className='grid lg:grid-cols-3 md:gap-6'>
-                    {
-                        rooms.map(room => <RoomCard key={room.room_id} name={room.name} img={room.image} price={room.price} capacity={room.capacity} size={room.size} view={room.view} link={room.link} featured={room.featured} offer={room.offer}></RoomCard>)
-                    }
-                </div > */}
                 <Swiper
+                    speed={900}
+                    loop={true}
                     breakpoints={{
                         0: {
                             slidesPerView: 1
@@ -153,7 +150,7 @@ const FeaturedRooms = () => {
 
                 </Swiper>
             </Container>
-        </>
+        </div>
     );
 };
 
