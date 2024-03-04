@@ -47,3 +47,16 @@ body ::selection {
   background-color: #55372F;
   border-color: #55372F;
 }
+
+.promoCard:hover .promoBtn {
+  transform: translatey(-40px);
+  opacity: 1;
+}
+.promoCard:hover .promoText {
+  transform: translateY(-75px);
+}
+
+.promoBtn {
+  transform: translatey(30px);
+  opacity: 0;
+}
