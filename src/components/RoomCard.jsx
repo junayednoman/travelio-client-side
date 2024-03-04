@@ -14,11 +14,11 @@ const RoomCard = ({ img, name, price, capacity, size, view, link, featured, offe
                     <div className='h-[230px] bg-center bg-no-repeat bg-cover max-w-full hover:scale-105 duration-300 flex justify-between p-4 px-6' style={{ backgroundImage: `url(${img})` }}>
                         {
                             featured &&
-                            <div className='px-3 flex gap-1 items-center text-sm bg-[#55372faa] text-white h-[30px] rounded-sm'><span>Featured</span> <Image width={15} src={featuredIcon} alt='featured icon'></Image></div>
+                            <div className='px-3 flex gap-1 items-center text-sm bg-[#fff] text-primaryColor h-[30px] rounded-sm'><span>Featured</span> <Image width={15} src={featuredIcon} alt='featured icon'></Image></div>
                         }
                         {
                             offer &&
-                            <div className='text-primaryColor font-semibold'>{offer}% Off</div>
+                            <div className='text-white font-semibold'>{offer}% Off</div>
                         }
                     </div>
                 </Link>
