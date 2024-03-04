@@ -65,3 +65,7 @@ body ::selection {
 .iconBtn:hover .myIcon {
   transform: translateX(5px);
 }
+
+.testiCard:hover .testiImg {
+  border: 1px solid #55372F;
+}

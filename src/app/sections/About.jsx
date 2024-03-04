@@ -35,7 +35,7 @@ const About = () => {
     ]
 
     return (
-        <div className="bg-[url(https://i.postimg.cc/pL9nsLd6/7041365-416.jpg)] bg-center bg-cover bg-no-repeat bg-fixed mb-20">
+        <div className="bg-[url(https://i.postimg.cc/pL9nsLd6/7041365-416.jpg)] bg-center bg-cover bg-no-repeat bg-fixed md:mb-20 mb-12">
             <div className="lg:py-32 md:py-24 py-16 bg-[#55372fe0]">
                 <Container>
                     <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
