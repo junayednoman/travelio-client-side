@@ -4,7 +4,7 @@ import { Rating } from "primereact/rating";
 
 const TestimonialCard = ({ name, image, rating, text }) => {
     return (
-        <div className="p-5 py-7 text-center border rounded-sm border-[#55372f28] hover:border-[#55372fb7] duration-500 hover:bg-[#55372f17] testiCard">
+        <div className="p-5 py-7 text-center border rounded-sm border-[#55372f28] duration-500 testiCard">
             <Image className="mx-auto rounded-full testiImg border border-white duration-500" width={80} height={1} src={image} alt="avatar"></Image>
             <h5 className="text-xl my-4">{name}</h5>
             <div className="mb-3">

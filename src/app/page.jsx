@@ -4,6 +4,7 @@ import Banner from "./sections/Banner";
 import CheckAvailability from "./sections/CheckAvailability";
 import FeaturedRooms from "./sections/FeaturedRooms";
 import GridPromo from "./sections/GridPromo";
+import Newsletter from "./sections/Newsletter";
 import Testimonial from "./sections/Testimonial";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <FeaturedRooms></FeaturedRooms>
       <About></About>
       <Testimonial></Testimonial>
+      <Newsletter></Newsletter>
     </main>
   );
 }

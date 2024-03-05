@@ -66,14 +66,55 @@ body ::selection {
   transform: translateX(5px);
 }
 
-.testiCard:hover .testiImg {
-  border: 1px solid #55372F;
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .testiSwiper .swiper-slide-active  {
+    border: 1px solid #55372f71;
+    background-color: #F0EDEC;
+  }
+  
+  .testiSwiper .swiper-slide-active  .testiImg {
+    border: 1px solid #55372f8c;
+  }
 }
 
-.testiSwiper .swiper-slide-next {
-  border: 1px solid #55372f71;
-  background-color: #F0EDEC;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .testiSwiper .swiper-slide-next {
+    border: 1px solid #fff;
+    background-color: #fff;
+  }
+
+  .testiSwiper .swiper-slide-next .testiImg {
+    border: 1px solid #fff;
+  }
 }
-.testiSwiper .swiper-slide-next .testiImg {
-  border: 1px solid #55372f8c;
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1024px) {
+  .testiSwiper .swiper-slide-next {
+    border: 1px solid #55372f71;
+    background-color: #F0EDEC;
+  }
+  
+  .testiSwiper .swiper-slide-next .testiImg {
+    border: 1px solid #55372f8c;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .testiSwiper .swiper-slide-next {
+    border: 1px solid #55372f71;
+    background-color: #F0EDEC;
+  }
+
+  .testiSwiper .swiper-slide-next .testiImg {
+    border: 1px solid #55372f8c;
+  }
 }
