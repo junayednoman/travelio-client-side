@@ -31,7 +31,7 @@ const Navbar = () => {
                     }
                 </div>
                 <div className='lg:block hidden'>
-                    <Btn text={"Register now"} link={"/"}></Btn>
+                    <Btn text={"Register now"} link={"/sign-up"}></Btn>
                 </div>
                 <div className='lg:hidden block'>
                     <MobileMenu menuItems={menuItems}></MobileMenu>

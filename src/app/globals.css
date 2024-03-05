@@ -66,16 +66,20 @@ body ::selection {
   transform: translateX(5px);
 }
 
-
+.divider::after,
+.divider::before {
+  background-color: #55372F;
+  height: 1px;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .testiSwiper .swiper-slide-active  {
+  .testiSwiper .swiper-slide-active {
     border: 1px solid #55372f71;
     background-color: #F0EDEC;
   }
-  
-  .testiSwiper .swiper-slide-active  .testiImg {
+
+  .testiSwiper .swiper-slide-active .testiImg {
     border: 1px solid #55372f8c;
   }
 }
@@ -101,7 +105,7 @@ body ::selection {
     border: 1px solid #55372f71;
     background-color: #F0EDEC;
   }
-  
+
   .testiSwiper .swiper-slide-next .testiImg {
     border: 1px solid #55372f8c;
   }
