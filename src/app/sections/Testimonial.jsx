@@ -70,49 +70,51 @@ const Testimonial = () => {
     return (
         <div className='md:mb-20 mb-14 px-6'>
             <SectionTitle heading="Guest Testimonials"></SectionTitle>
-            <Swiper
-                loop={true}
-                breakpoints={{
-                    0: {
-                        slidesPerView: 1
-                    },
-                    670: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 25,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 25,
-                    },
-                    1450: {
-                        slidesPerView: 4,
-                        spaceBetween: 25,
+            <Container>
+                <Swiper
+                    loop={true}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 1
+                        },
+                        670: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 25,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 25,
+                        },
+                        1450: {
+                            slidesPerView: 3,
+                            spaceBetween: 25,
+                        }
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    speed={1000}
+                    autoplay={{
+                        delay: 2400,
+                        disableOnInteraction: false,
+
+                    }}
+                    modules={[Pagination, Autoplay]}
+                    className="mySwiper testiSwiper"
+                >
+                    {
+                        testimonials.map(item => <SwiperSlide key={item.id} >
+                            <TestimonialCard name={item.name} text={item.text} rating={item.rating} image={item.image}></TestimonialCard>
+                        </SwiperSlide>
+                        )
                     }
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                speed={1000}
-                autoplay={{
-                    delay: 2400,
-                    disableOnInteraction: false,
 
-                }}
-                modules={[Pagination, Autoplay]}
-                className="mySwiper"
-            >
-                {
-                    testimonials.map(item => <SwiperSlide key={item.id} >
-                        <TestimonialCard name={item.name} text={item.text} rating={item.rating} image={item.image}></TestimonialCard>
-                    </SwiperSlide>
-                    )
-                }
-
-            </Swiper>
+                </Swiper>
+            </Container>
         </div>
     );
 };

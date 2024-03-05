@@ -69,3 +69,11 @@ body ::selection {
 .testiCard:hover .testiImg {
   border: 1px solid #55372F;
 }
+
+.testiSwiper .swiper-slide-next {
+  border: 1px solid #55372f71;
+  background-color: #F0EDEC;
+}
+.testiSwiper .swiper-slide-next .testiImg {
+  border: 1px solid #55372f8c;
+}
