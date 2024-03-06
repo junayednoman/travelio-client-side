@@ -72,6 +72,33 @@ body ::selection {
   height: 1px;
 }
 
+.p-tabview-nav-container {
+  border: 1px solid #55372F;
+}
+
+.p-tabview-nav {
+  border-bottom: 0 !important;
+  justify-content: center;
+}
+
+.p-tabview-panels {
+  border: 1px solid #55372F;
+  border-top: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#checkin input,
+#checkout input,
+#guest input {
+  border: 1px solid #55372F;
+  height: 44px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .testiSwiper .swiper-slide-active {

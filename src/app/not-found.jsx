@@ -1,6 +1,6 @@
 import Btn from '@/components/Btn';
 import Image from 'next/image';
-import notFound from "@/../public/404.jpg"
+import notFound from "@/../public/not-found.jpg"
 
 const NotFound = () => {
     return (

@@ -143,7 +143,7 @@ const FeaturedRooms = () => {
                 >
                     {
                         rooms.map(room => <SwiperSlide key={room.room_id} >
-                            <RoomCard name={room.name} img={room.image} price={room.price} capacity={room.capacity} size={room.size} view={room.view} link={room.link} featured={room.featured} offer={room.offer}></RoomCard>
+                            <RoomCard roomInfo={room}></RoomCard>
                         </SwiperSlide>
                         )
                     }

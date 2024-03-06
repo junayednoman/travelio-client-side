@@ -5,8 +5,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
     return (
-        <div className='bg-[#F0EDEC]'>
-            <Container>
+        <div className='bg-[#F0EDEC] xl:px-[130px] lg:px-16 md:px-10 px-3'>
                 <footer className="footer p-10 text-base-content">
                     <aside>
                         <Link href="/">
@@ -39,7 +38,6 @@ const Footer = () => {
                         <a className="link link-hover">Cookie policy</a>
                     </nav>
                 </footer>
-            </Container>
         </div>
     );
 };

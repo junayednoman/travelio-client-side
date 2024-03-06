@@ -19,11 +19,11 @@ const CheckAvailability = () => {
                     <Calendar className='w-full' id='checkout' placeholder='Check out date' value={checkOutDate} onChange={(e) => setCheckOutDate(e.value)} showIcon />
                 </div>
                 <div>
-                    <label htmlFor="nights" className="font-bold block mb-2">Guests</label>
-                    <InputNumber className='w-full' placeholder='EX: 3' value={guests} onValueChange={(e) => setGuests(e.value)} min={0} max={30} />
+                    <label  className="font-bold block mb-2">Guests</label>
+                    <InputNumber id="guest" className='w-full' placeholder='EX: 3' value={guests} onValueChange={(e) => setGuests(e.value)} min={0} max={30} />
                 </div>
                 <div className='md:mt-0 mt-2'>
-                    <label htmlFor="nights" className="font-bold md:block hidden mb-2 invisible">Guests</label>
+                    <label className="font-bold md:block hidden mb-2 invisible">Guests</label>
                     <input type="submit" value="Check Availability" className='bg-primaryColor border border-primaryColor hover:bg-transparent hover:text-primaryColor duration-200 text-white rounded-sm h-[44px] w-full cursor-pointer' />
                 </div>
             </form>

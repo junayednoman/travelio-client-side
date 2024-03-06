@@ -1,9 +1,10 @@
+"use client"
 import Link from 'next/link';
 
-const Btn = ({ text, link }) => {
+const Btn = ({ text, link, btnHnadler }) => {
     return (
         <>
-            <Link className='px-6 py-3 bg-primaryColor text-white capitalize border border-[#55372F] hover:bg-transparent hover:text-primaryColor duration-200 text-center' href={link}>{text}</Link>
+            <Link onClick={btnHnadler} className='px-6 py-3 bg-primaryColor text-white capitalize border border-[#55372F] hover:bg-transparent hover:text-primaryColor duration-200 text-center' href={link}>{text}</Link>
         </>
     );
 };
