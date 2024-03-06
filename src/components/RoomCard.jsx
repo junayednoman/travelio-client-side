@@ -11,7 +11,7 @@ const RoomCard = ({ roomInfo }) => {
     return (
         <div className='border w-full'>
             <div>
-                <Link className='max-w-full block overflow-hidden' href={`/rooms/${room_id}`}>
+                <Link className='max-w-full block overflow-hidden' href={`/room/${room_id}`}>
                     <div className='h-[230px] bg-center bg-no-repeat bg-cover max-w-full hover:scale-105 duration-300 flex justify-between p-4 px-6' style={{ backgroundImage: `url(${image})` }}>
                         {
                             featured &&
@@ -34,7 +34,7 @@ const RoomCard = ({ roomInfo }) => {
                 <div className='grid grid-cols-2 items-center justify-between gap-6 mt-3 p-5 pt-0'>
                     <p className='text-primaryColor'>${price} / Night</p>
                     <div>
-                        <Link href={`/rooms/${room_id}`} className='flex items-center justify-end gap-0 w-full ml-auto text-primaryColor iconBtn'>
+                        <Link href={`/room/${room_id}`} className='flex items-center justify-end gap-0 w-full ml-auto text-primaryColor iconBtn'>
                             View Room
                             <IoIosArrowRoundForward className='text-[28px] myIcon duration-300' />
                         </Link>

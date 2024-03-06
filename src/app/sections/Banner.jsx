@@ -9,7 +9,7 @@ const Banner = () => {
                 <Container>
                     <h1 className='xl:text-8xl lg:text-7xl md:text-6xl text-4xl uppercase'>Book Your Stay</h1>
                     <p className='md:text-lg text-base xl:my-16 lg:my-8 md:my-10 mt-4 mb-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex fugit maxime incidunt aliquam iusto sit. <br className='lg:block hidden' /> Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <SecondaryBtn text="Book your stay" link={"/"}></SecondaryBtn>
+                    <SecondaryBtn text="Book your stay" link={"/rooms"}></SecondaryBtn>
                 </Container>
             </div>
         </div>

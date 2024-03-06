@@ -3,7 +3,7 @@ import Image from "next/image";
 import bg from "@/../public/newsletter-bg.jpg"
 const Newsletter = () => {
     return (
-        <div className="relative bg-center bg-cover bg-no-repeat">
+        <div className="relative">
             <div className="md:py-32 py-20 bg-[#55372fbe]">
                 <Container>
                     <div className="text-center text-white md:mb-10 mb-6">

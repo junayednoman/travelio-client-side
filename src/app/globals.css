@@ -99,6 +99,13 @@ input[type='number']::-webkit-outer-spin-button {
   height: 44px;
 }
 
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background-color: #55372f46;
+}
+.p-paginator .p-paginator-pages .p-paginator-page:hover {
+  background-color: #55372f16;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .testiSwiper .swiper-slide-active {
