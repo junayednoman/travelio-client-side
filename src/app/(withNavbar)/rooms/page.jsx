@@ -106,7 +106,6 @@ const Rooms = () => {
             "offer": 8
         }
     ]
-
     return (
         <div>
             <div className="relative">

@@ -1,9 +1,11 @@
-
-import Btn from '@/components/Btn';
+import AccountOption from '@/components/AccountOption';
 import MobileMenu from '@/components/MobileMenu';
 import Link from 'next/link';
 
+
 const Navbar = () => {
+
+    
     return (
         <div className='border-b bg-[#F8F9FA]'>
             <div className='py-2 text-primaryColor flex justify-between items-center xl:px-[130px] lg:px-16 md:px-10 px-3 border-b'>
@@ -30,8 +32,8 @@ const Navbar = () => {
                         menuItems.map(item => <Link className='font-medium hover:underline duration-200' key={item.label} href={item.url}>{item.label}</Link>)
                     }
                 </div>
-                <div className='lg:block hidden'>
-                    <Btn text={"Register now"} link={"/sign-up"}></Btn>
+                <div className='lg:block hidden relative'>
+                    <AccountOption></AccountOption>
                 </div>
                 <div className='lg:hidden block'>
                     <MobileMenu menuItems={menuItems}></MobileMenu>

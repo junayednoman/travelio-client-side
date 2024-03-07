@@ -1,7 +1,7 @@
 
 
 const About = () => {
-    throw new Error("there is an error!")
+    // throw new Error("there is an error!")
     return (
         <>
             <p>About</p>
