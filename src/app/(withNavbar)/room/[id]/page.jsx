@@ -12,11 +12,12 @@ import { IoFastFoodOutline } from "react-icons/io5";
 import { FaSmoking } from "react-icons/fa6";
 import Newsletter from "@/app/sections/Newsletter";
 import BookingForm from "@/components/BookingForm";
-import getSingleRoom from "../../../../../lib/getSingleRoom";
+import axios from "axios";
 
 const RoomDetails = async ({ params }) => {
-    const room = await getSingleRoom(params?.id);
-    const { name, image, price, description, capacity, size, view, room_views } = room;
+    const res = await axios.get(`http://localhost:5000/api/rooms/${params?.id}`);
+    const room = res.data;
+    const { name, image, price, description, capacity, size, view, _id, available } = room;
 
     return (
         <div className="md:pt-16 pt-8">
@@ -98,7 +99,14 @@ const RoomDetails = async ({ params }) => {
                     </TabView>
 
                     {/* form for booking room */}
-                    <BookingForm></BookingForm>
+                    {
+                        available ?
+                            <BookingForm id={_id}></BookingForm>
+                            :
+                            <>
+                                <h5 className="md:text-4xl text-2xl text-red-600 text-center mt-12">This room is not available to book</h5>
+                            </>
+                    }
 
                 </div>
             </Container>

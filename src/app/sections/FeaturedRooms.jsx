@@ -5,20 +5,18 @@ import SectionTitle from '@/components/SectionTitle';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
-import { getRooms } from '../../../lib/getRooms';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 const FeaturedRooms = () => {
     const [rooms, setRooms] = useState([]);
     useEffect(() => {
-        getRooms()
+        axios.get("http://localhost:5000/api/rooms/")
             .then(res => {
-                console.log(res);
-                setRooms(res)
-            })
-            .catch(err => {
-                console.log(err);
+                setRooms(res?.data)
+            }).catch(err => {
+                throw new Error(err);
             })
     }, [])
     // const rooms = [
