@@ -5,13 +5,26 @@ import { GrOverview } from "react-icons/gr";
 import Link from 'next/link';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import featuredIcon from "@/../public/featured-icon.png"
+import axios from 'axios';
 
 const RoomCard = ({ roomInfo }) => {
+
     const { image, name, price, capacity, size, view, featured, offer, _id, room_views } = roomInfo;
+    const handleUpdateRoomsViews = () => {
+        const updatedData = { room_views: room_views + 1 };
+        axios.patch(`http://localhost:5000/api/rooms/${_id}`, updatedData)
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+
     return (
         <div className='border w-full'>
             <div>
-                <Link className='max-w-full block overflow-hidden' href={`/room/${_id}`}>
+                <Link onClick={handleUpdateRoomsViews} className='max-w-full block overflow-hidden' href={`/room/${_id}`}>
                     <div className='h-[230px] bg-center bg-no-repeat bg-cover max-w-full hover:scale-105 duration-300 flex justify-between p-4 px-6' style={{ backgroundImage: `url(${image})` }}>
                         {
                             featured &&
@@ -40,7 +53,7 @@ const RoomCard = ({ roomInfo }) => {
                 <div className='grid grid-cols-2 items-center justify-between gap-6 mt-3 p-5 pt-0'>
                     <p className='text-primaryColor'>${price} / Night</p>
                     <div>
-                        <Link href={`/room/${_id}`} className='flex items-center justify-end gap-0 w-full ml-auto text-primaryColor iconBtn'>
+                        <Link onClick={handleUpdateRoomsViews} href={`/room/${_id}`} className='flex items-center justify-end gap-0 w-full ml-auto text-primaryColor iconBtn'>
                             View Room
                             <IoIosArrowRoundForward className='text-[28px] myIcon duration-300' />
                         </Link>

@@ -6,20 +6,21 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { getRooms } from '../../../lib/getRooms';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 const FeaturedRooms = () => {
     const [rooms, setRooms] = useState([]);
-    getRooms()
-        .then(res => {
-            console.log(res);
-            setRooms(res)
-        })
-        .catch(err => {
-            console.log(err);
-        })
-
+    useEffect(() => {
+        getRooms()
+            .then(res => {
+                console.log(res);
+                setRooms(res)
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }, [])
     // const rooms = [
     //     {
     //         "room_id": 1,

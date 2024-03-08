@@ -16,12 +16,7 @@ import getSingleRoom from "../../../../../lib/getSingleRoom";
 
 const RoomDetails = async ({ params }) => {
     const room = await getSingleRoom(params?.id);
-    const { name, image, price, description, capacity, size, view } = room;
-
-
-    // const handleUpdateView = () => {
-
-    // }
+    const { name, image, price, description, capacity, size, view, room_views } = room;
 
     return (
         <div className="md:pt-16 pt-8">
